@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">section_02</string>
+    <string name="HELLO_WORLD">안녕하세요 세계!</string>
+    <string name="REFRESH">새로 고침</string>
+</resources>

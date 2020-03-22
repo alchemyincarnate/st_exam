@@ -1,3 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">section_02</string>
+    <string name="HELLO_WORLD">Hello World!</string>
+    <string name="REFRESH">Refresh</string>
 </resources>
