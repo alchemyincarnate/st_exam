@@ -55,7 +55,7 @@ public class StringResourceLoaderModule extends ReactContextBaseJavaModule {
         try {
             String result = getLocaleStringResource( languageId, resourceName, getReactApplicationContext() );
             successCallback.invoke( result );
-        } catch (IllegalViewOperationException e) {
+        } catch (Exception e) {
             errorCallback.invoke( e.getMessage() );
         }
     }
