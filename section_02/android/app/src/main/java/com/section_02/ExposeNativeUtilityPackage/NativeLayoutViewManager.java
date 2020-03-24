@@ -5,9 +5,11 @@ import com.facebook.react.uimanager.ThemedReactContext;
 
 public class NativeLayoutViewManager extends SimpleViewManager<NativeLayoutView> {
 
+    public static final String REACT_CLASS = "NativeLayoutView";
+
     @Override
     public String getName() {
-        return "NativeLayoutView";
+        return REACT_CLASS;
     }
 
     @Override

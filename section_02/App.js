@@ -9,7 +9,6 @@ import {
 } from 'react-native';
 
 // In-project classes
-// import {NativeLayoutView} from './src/native/NativeLayoutView.js'
 import {LocalizationLoader} from './src/components/LocalizationLoader.js'
 import {LocalizedText} from './src/components/LocalizedText.js'
 import {LocalizeButton} from './src/components/LocalizeButton.js'
@@ -30,6 +29,10 @@ export default class App extends Component<Props> {
   render ()
   {
     return (
+      // Currently non-functional
+      // <NativeLayoutView>
+      // </NativeLayoutView>
+
       <View style={styles.container}>
         <LocalizedText
           reference={this.state.reference}
