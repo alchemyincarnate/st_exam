@@ -1,6 +1,10 @@
 import React, {Component} from 'react'
 import {View, Text, ActivityIndicator} from 'react-native'
 
+/*
+ * Loads the necessary localization files on startup
+ * Displays an ActivityIndicator while it is still loading
+*/
 export class LocalizationLoader extends Component
 {
     state = {
@@ -27,7 +31,8 @@ export class LocalizationLoader extends Component
         );
     }
 
-
+    // Performs a get on a specified url
+    // Hardcoded to get json only
     loadLocalizationFiles( url )
     {
         this.setLoading( true );
@@ -49,6 +54,7 @@ export class LocalizationLoader extends Component
         });
     }
 
+    // Set current loading state
     setLoading( isLoading )
     {
         this.setState( {

@@ -3,6 +3,13 @@ import {NativeModules, View, Text} from 'react-native'
 
 var StringResourceLoader = NativeModules.StringResourceLoader; 
 
+/*
+* This class displays a string obtained from [reference] via [language] and [locKey]
+* [language] is a state at the Main class, while [locKey] is set when creating this object
+* State:
+* - output: the string to show
+* - source: where the string came from, can be disabled by props: isShowSource
+*/
 export class LocalizedText extends Component
 {
     constructor(props) {

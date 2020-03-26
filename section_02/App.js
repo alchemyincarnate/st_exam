@@ -32,6 +32,7 @@ export default class App extends Component<Props> {
       // Currently non-functional
       // <NativeLayoutView>
       // </NativeLayoutView>
+      // TODO: This list of LocalizedText and LocalizeButton need to be replaced by the layout.xml
 
       <View style={styles.container}>
         <LocalizedText

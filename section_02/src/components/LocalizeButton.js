@@ -2,6 +2,10 @@ import React, {Component} from 'react'
 import {TouchableOpacity, View, Text} from 'react-native'
 import {LocalizedText} from './LocalizedText.js'
 
+/*
+* A Button that displays a LocalizedText and allows changing of the Main language
+* [language] is independent from Main language, and Main language is changed to this value when this button is pressed
+*/
 export class LocalizeButton extends Component
 {
     constructor(props) {
@@ -23,9 +27,9 @@ export class LocalizeButton extends Component
         );
     }
 
+    // set language to the language defined
     setLang = () =>
     {
-        // set language to the language defined
         this.props.onSetLang( this.props.language );
     }
 }
