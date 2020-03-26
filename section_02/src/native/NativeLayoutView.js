@@ -1,3 +1,9 @@
 import {requireNativeComponent} from 'react-native';
 
-module.exports = requireNativeComponent( 'NativeLayoutView' );
+var NativeLayoutView = requireNativeComponent('NativeLayoutView');
+
+class LayoutView {
+    
+}
+
+module.exports = {NativeLayoutView};
