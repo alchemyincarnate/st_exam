@@ -7,6 +7,10 @@ var JavaRssReader = NativeModules.JavaRssReader;
 
 import {RssEntry} from './RssEntry.js'
 
+/*
+* This class represents a set of RssEntries
+* They are rendered in a ScrollView
+*/
 export class RssFeedView extends Component {
 
     constructor( props )
@@ -38,7 +42,8 @@ export class RssFeedView extends Component {
         );
     }
 
-
+    // This method loads an rss xml file from the given url
+    // Returns the title of the rss feed and this is used as a parameter for getEntries()
     loadRssFeed( url ) {
         JavaRssReader.loadFeed (
             url,
@@ -55,6 +60,8 @@ export class RssFeedView extends Component {
         )
     }
 
+    // This method filters all <entry> objects from the rss feed, and returns the id from each as an array of strings
+    // This is used by RssEntry as an identifier
     getEntries() {
         if( this.state.documentId == "" )
             return;

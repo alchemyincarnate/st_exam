@@ -61,6 +61,10 @@ public class RssReaderModule extends ReactContextBaseJavaModule {
     }
 
     // React Methods
+    /**
+     * Loads the xml/rss feed
+     * This is only loaded in this module, and its entries can be accessed via keys like a dictionary
+     */
     @ReactMethod
     public void loadFeed( String url, Callback errorCallback, Callback successCallback )
     {
@@ -78,6 +82,10 @@ public class RssReaderModule extends ReactContextBaseJavaModule {
         }
     }
 
+    /**
+     * Gets the id of all entries found in the xmlDocument as an array of strings
+     * These can be used as keys to get entries
+     */
     @ReactMethod
     public void getEntries( String documentId, Callback errorCallback, Callback successCallback )
     {
@@ -92,6 +100,9 @@ public class RssReaderModule extends ReactContextBaseJavaModule {
         successCallback.invoke( writable );
     }
 
+    /**
+     * Gets entry display parameters from an xmlDocument using documentId and entryId
+     */
     @ReactMethod
     public void getEntrySummary( String documentId, String entryId, Callback errorCallback, Callback successCallback ) {
         RssXmlEntry entry = GetXmlEntry( documentId, entryId );

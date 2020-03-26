@@ -14,6 +14,10 @@ public class RssXmlRoot
     public XmlLink link;
     public RssXmlEntry[] entries;
 
+    /**
+     * A simple wrapper for an rssfeed xmlObject
+     * @param xmlObject the xml string
+     */
     public RssXmlRoot( Element xmlObject ) {
         if( xmlObject == null )
             return;

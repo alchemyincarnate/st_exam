@@ -10,6 +10,10 @@ import java.util.ArrayList;
 
 public class RssXmlEntry
 {
+    /**
+     * A simple wrapper for an rssfeed entry
+     * @param element The root node of the entry
+     */
     public RssXmlEntry ( Element element )
     {
         linkList = new ArrayList<XmlLink> ();
