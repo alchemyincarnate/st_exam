@@ -4,6 +4,7 @@ import com.section_02.R;
 import android.content.Context;
 import android.widget.LinearLayout;
 
+// Unfinished, intended to create the RN view from layout.xml
 public class NativeLayoutView extends LinearLayout {
 
     private Context context;

@@ -13,6 +13,9 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 
+/**
+ * Static class to load strings from strings.xml to react-native
+ */
 public class StringResourceLoaderModule extends ReactContextBaseJavaModule {
 
     public StringResourceLoaderModule(@NonNull ReactApplicationContext reactContext) {
@@ -25,6 +28,13 @@ public class StringResourceLoaderModule extends ReactContextBaseJavaModule {
         return "StringResourceLoader";
     }
 
+    /**
+     *  This loads a string from strings.xml when it is unavailable from the hosted file
+     * @param languageId language code
+     * @param resourceName the ID of the string
+     * @param context react application context
+     * @return the value of the string after localization
+     */
     public static String getLocaleStringResource(String languageId, String resourceName, Context context) {
         // https://stackoverflow.com/questions/9475589/how-to-get-string-from-different-locales-in-android
         String result;
@@ -49,6 +59,10 @@ public class StringResourceLoaderModule extends ReactContextBaseJavaModule {
     }
 
     // React Methods
+
+    /**
+     *  Wrapper of getLocaleStringResources to expose it in react-native
+     */
     @ReactMethod
     public void getLocalizedString( String languageId, String resourceName, Callback errorCallback, Callback successCallback )
     {
