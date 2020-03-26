@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {NativeModules, ScrollView, Text, ActivityIndicator} from 'react-native';
+import {NativeModules, ScrollView, ActivityIndicator} from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -19,6 +19,10 @@ function ActivityIndicatorLoadingView() {
     );
 }
 
+/*
+* This class loads any number of RSSFeedViews
+* When an entry is tapped, it opens the <alternate> link contained within
+*/
 export class RssFeedViewer extends Component {
 
     constructor( props )
@@ -27,6 +31,7 @@ export class RssFeedViewer extends Component {
         this.state = { visible: true };
     }
 
+    // The view for rssList, uses react-navigation
     getRssListView ({route, navigation}) {
         return (
             <ScrollView>
@@ -36,6 +41,7 @@ export class RssFeedViewer extends Component {
         );
     }
     
+    // The view for rssEntry, uses react-navigation
     getRssEntryView ({route, navigation}) {
         
         let visible = true;

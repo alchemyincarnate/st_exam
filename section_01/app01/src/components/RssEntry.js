@@ -6,6 +6,9 @@ import { WebView } from 'react-native-webview';
 
 var JavaRssReader = NativeModules.JavaRssReader;
 
+/*
+* Converts a single view into a touchable that opens the Entry page
+*/
 function OpenLink ({link}) {
     const navigation = useNavigation();
     return (
@@ -17,6 +20,10 @@ function OpenLink ({link}) {
     );
 }
 
+/*
+* This is a representation of a single entry in RSS
+* Currently only shows Title and html content
+*/
 export class RssEntry extends Component {
 
     constructor( props )
@@ -60,6 +67,7 @@ export class RssEntry extends Component {
     }
 
 
+    // Gets an rss entry from ModuleB
     getEntrySummary( ) {
         JavaRssReader.getEntrySummary (
             this.props.documentId,
